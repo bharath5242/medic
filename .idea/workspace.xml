@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ae9007fc-0aa7-4ae8-94ad-21cc5889767e" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="downloadAnnotationsAutomatically" value="true" />
+        <option name="downloadDocsAutomatically" value="true" />
+        <option name="downloadSourcesAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2lbsMpLCIT8Eb8731ltsBuNVlGg" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Ipl.executor": "Run",
+    "Application.IplApplication.executor": "Run",
+    "Application.SupplyLinkApplication.executor": "Run",
+    "Application.Unnamed (1).executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.ElevenTest.executor": "Run",
+    "JUnit.ElevenTest.testCreateBooking_Day11.executor": "Run",
+    "JUnit.ElevenTest.testGetAllBookings_Day11.executor": "Debug",
+    "JUnit.ElevenTest.testGetAllInsurance_Day11.executor": "Run",
+    "JUnit.ElevenTest.testGetBookingsByUserEmail_Day11.executor": "Run",
+    "JUnit.FourFiveTest.executor": "Run",
+    "JUnit.FourFiveTest.testAddSupplierToArrayList_Day5.executor": "Run",
+    "JUnit.FourFiveTest.testGetAllSupplier_Day5.executor": "Run",
+    "JUnit.FourFiveTest.testGetAllSuppliersSortedByNameFromArrayList_Day5.executor": "Run",
+    "JUnit.FourFiveTest.testMainMethodOutput_Day4.executor": "Run",
+    "JUnit.NineTest.executor": "Run",
+    "JUnit.NineTest.testTeamAlreadyExistsException_Day9.executor": "Debug",
+    "JUnit.OneTwoThreeTest (1).executor": "Run",
+    "JUnit.OneTwoThreeTest (2).executor": "Run",
+    "JUnit.OneTwoThreeTest.executor": "Run",
+    "JUnit.OneTwoThreeTest.testDeleteClinic_Day3.executor": "Run",
+    "JUnit.OneTwoThreeTest.testGetAllPatientsSortedByName_Day3.executor": "Run",
+    "JUnit.OneTwoThreeTest.testGetAllSuppliers_Day3.executor": "Debug",
+    "JUnit.SixSevenEightTest.executor": "Run",
+    "JUnit.SixSevenEightTest.testAddSupplierController_Day6.executor": "Run",
+    "JUnit.SixSevenEightTest.testDeleteTeamController_Day6.executor": "Run",
+    "JUnit.SixSevenEightTest.testGetAllClinicesByLocationController_Day8.executor": "Run",
+    "JUnit.SixSevenEightTest.testGetAllMatchesByStatusController_Day8.executor": "Run",
+    "JUnit.SixSevenEightTest.testGetAllMatchesController_Day8.executor": "Run",
+    "JUnit.SixSevenEightTest.testGetAllTeam_Day6.executor": "Run",
+    "JUnit.SixSevenEightTest.testGetAllWarehouseSortedByCapacity_Day8.executor": "Run",
+    "JUnit.SixSevenEightTest.testGetDoctorById_Day7.executor": "Run",
+    "JUnit.TenTest.executor": "Run",
+    "JUnit.TenTest.testGetAllShipments_Day10.executor": "Run",
+    "JUnit.TenTest.testGetAllVotes_Day10.executor": "Run",
+    "JUnit.TenTest.testGetVotesCountByAllCategory_Day10.executor": "Run",
+    "JUnit.TwelveThirteenTest.doctorShouldAccessClinicPostEndpoint.executor": "Run",
+    "JUnit.TwelveThirteenTest.executor": "Run",
+    "JUnit.TwelveThirteenTest.patientShouldAccessPatientGetEndpoint.executor": "Run",
+    "JUnit.TwelveThirteenTest.testCreateClinicAsDoctor.executor": "Run",
+    "JUnit.TwelveThirteenTest.testCreateClinicAsDoctor_Day13.executor": "Run",
+    "JUnit.TwelveThirteenTest.testDoctorControllerAddDoctor_Day13.executor": "Debug",
+    "JUnit.TwelveThirteenTest.testGenerateToken_Day12.executor": "Run",
+    "JUnit.TwelveThirteenTest.testRegisterUserSuccess_Day13.executor": "Run",
+    "JUnit.TwelveThirteenTest.testSupplierControllerDeleteSupplier_Day13.executor": "Run",
+    "JUnit.TwelveThirteenTest.testTeamControllerAddTeam_Day13.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/abhi/Desktop/MediConnect/java-angular-mediconnect-v1",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propCompiler"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/missing-solution/backend/src/main/java/com/wecp/progressive/repository" />
+      <recent name="$PROJECT_DIR$/missing-solution/backend" />
+      <recent name="$PROJECT_DIR$/backend" />
+      <recent name="$PROJECT_DIR$/backend/src" />
+      <recent name="$PROJECT_DIR$/missing-solution/frontend/src/app/ipl/components/teamedit" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/missing-solution/backend/src/main/java/com/wecp/progressive/service/impl" />
+      <recent name="$PROJECT_DIR$/backend/src/main/java/com/wecp/progressive/service/impl" />
+      <recent name="$PROJECT_DIR$/backend/src/main/resources" />
+      <recent name="$PROJECT_DIR$/backend/src/main" />
+      <recent name="$PROJECT_DIR$/backend" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Unnamed (1)">
+    <configuration name="Ipl" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.wecp.progressive.IplApplication" />
+      <module name="progressive-ipl" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Unnamed (1)" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.wecp.progressive.MediConnectApplication" />
+      <module name="progressive-mediconnect" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <module name="progressive-ipl" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TwelveThirteenTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="progressive-mediconnect" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wecp.progressive.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.wecp.progressive" />
+      <option name="MAIN_CLASS_NAME" value="com.wecp.progressive.TwelveThirteenTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TwelveThirteenTest.patientShouldAccessPatientGetEndpoint" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="progressive-mediconnect" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wecp.progressive.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.wecp.progressive" />
+      <option name="MAIN_CLASS_NAME" value="com.wecp.progressive.TwelveThirteenTest" />
+      <option name="METHOD_NAME" value="patientShouldAccessPatientGetEndpoint" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TwelveThirteenTest.testDoctorControllerAddDoctor_Day13" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="progressive-mediconnect" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wecp.progressive.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.wecp.progressive" />
+      <option name="MAIN_CLASS_NAME" value="com.wecp.progressive.TwelveThirteenTest" />
+      <option name="METHOD_NAME" value="testDoctorControllerAddDoctor_Day13" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TwelveThirteenTest.testGenerateToken_Day12" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="progressive-mediconnect" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wecp.progressive.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.wecp.progressive" />
+      <option name="MAIN_CLASS_NAME" value="com.wecp.progressive.TwelveThirteenTest" />
+      <option name="METHOD_NAME" value="testGenerateToken_Day12" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TwelveThirteenTest.testTeamControllerAddTeam_Day13" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="progressive-mediconnect" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wecp.progressive.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.wecp.progressive" />
+      <option name="MAIN_CLASS_NAME" value="com.wecp.progressive.TwelveThirteenTest" />
+      <option name="METHOD_NAME" value="testTeamControllerAddTeam_Day13" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Unnamed" />
+      <item itemvalue="Application.Ipl" />
+      <item itemvalue="Application.Unnamed (1)" />
+      <item itemvalue="JUnit.TwelveThirteenTest" />
+      <item itemvalue="JUnit.TwelveThirteenTest.testDoctorControllerAddDoctor_Day13" />
+      <item itemvalue="JUnit.TwelveThirteenTest.testGenerateToken_Day12" />
+      <item itemvalue="JUnit.TwelveThirteenTest.patientShouldAccessPatientGetEndpoint" />
+      <item itemvalue="JUnit.TwelveThirteenTest.testTeamControllerAddTeam_Day13" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TwelveThirteenTest" />
+        <item itemvalue="JUnit.TwelveThirteenTest.testDoctorControllerAddDoctor_Day13" />
+        <item itemvalue="JUnit.TwelveThirteenTest.testGenerateToken_Day12" />
+        <item itemvalue="JUnit.TwelveThirteenTest.patientShouldAccessPatientGetEndpoint" />
+        <item itemvalue="JUnit.TwelveThirteenTest.testTeamControllerAddTeam_Day13" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ae9007fc-0aa7-4ae8-94ad-21cc5889767e" name="Changes" comment="" />
+      <created>1725460065934</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1725460065934</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.ts" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/backend/src/test/java/com/wecp/progressive/SixSevenEightTest.java</url>
+          <line>295</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/backend/src/test/java/com/wecp/progressive/SixSevenEightTest.java</url>
+          <line>297</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/backend/src/main/java/com/wecp/progressive/controller/UserLoginController.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/src/test/java/com/wecp/progressive/SixSevenEightTest.java</url>
+          <line>254</line>
+          <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/src/test/java/com/wecp/progressive/SixSevenEightTest.java</url>
+          <line>255</line>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/src/test/java/com/wecp/progressive/SixSevenEightTest.java</url>
+          <line>257</line>
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/src/test/java/com/wecp/progressive/SixSevenEightTest.java</url>
+          <line>259</line>
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/src/test/java/com/wecp/progressive/TwelveThirteenTest.java</url>
+          <line>234</line>
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/src/main/java/com/wecp/progressive/jwt/JwtRequestFilter.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/src/main/java/com/wecp/progressive/jwt/JwtRequestFilter.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="94" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/src/main/java/com/wecp/progressive/jwt/JwtRequestFilter.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="95" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/src/main/java/com/wecp/progressive/controller/DoctorController.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/src/main/java/com/wecp/progressive/controller/DoctorController.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/src/test/java/com/wecp/progressive/TwelveThirteenTest.java</url>
+          <line>206</line>
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/src/test/java/com/wecp/progressive/TwelveThirteenTest.java</url>
+          <line>207</line>
+          <option name="timeStamp" value="104" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/src/test/java/com/wecp/progressive/TwelveThirteenTest.java</url>
+          <line>212</line>
+          <option name="timeStamp" value="105" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/src/test/java/com/wecp/progressive/TwelveThirteenTest.java</url>
+          <line>213</line>
+          <option name="timeStamp" value="106" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/src/test/java/com/wecp/progressive/TwelveThirteenTest.java</url>
+          <line>210</line>
+          <option name="timeStamp" value="107" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/src/test/java/com/wecp/progressive/TwelveThirteenTest.java</url>
+          <line>209</line>
+          <option name="timeStamp" value="108" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/src/main/java/com/wecp/progressive/controller/DoctorController.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="111" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/backend/src/main/java/com/wecp/progressive/controller/UserLoginController.java</url>
+          <line>59</line>
+          <properties class="com.wecp.progressive.controller.UserLoginController" method="getUserDetails">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
