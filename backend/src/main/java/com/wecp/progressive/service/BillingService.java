@@ -4,6 +4,8 @@ import com.wecp.progressive.entity.Billing;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+@Service
 public interface BillingService {
 
     List<Billing> getAllBills();

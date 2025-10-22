@@ -1,0 +1,326 @@
+# POST http://localhost:5000/user/register
+# Content-Type: application/json
+
+# {
+#     "username": "bharath7327",
+#     "password": "Welcome@123",
+#     "role": "Doctor",
+#     "fullName": "Bharath S",
+#     "specialty": "Opthamology",
+#     "contactNumber": "1234567890",
+#     "email": "bharath7327@gmail.com",
+#     "yearsOfExperience": 5
+# }
+
+# POST http://localhost:5000/user/register
+# Content-Type: application/json
+
+# {
+#     "username": "bharathi8400",
+#     "password": "Welcome@123",
+#     "role": "Doctor",
+#     "fullName": "Bharathi ",
+#     "specialty": "Caridology",
+#     "contactNumber": "1234567890",
+#     "email": "bharathi@gmail.com",
+#     "yearsOfExperience": 5
+# }
+
+# POST http://localhost:5000/user/register
+# Content-Type: application/json
+
+# {
+#     "username": "arjun9999",
+#     "password": "Welcome@123",
+#     "role": "Patient",
+#     "fullName": "Arjun C R",
+#     "dateOfBirth": "2003-07-06",
+#     "contactNumber": "1234567890",
+#     "email": "aarjun@gmail.com",
+#     "address": "123, Dubai Main street, Dubai narrow street, Dubai"
+# }
+
+# POST http://localhost:5000/user/register
+# Content-Type: application/json
+
+# {
+#     "username": "aaari88",
+#     "password": "Welcome@123",
+#     "role": "Patient",
+#     "fullName": "Aari Came Ron",
+#     "dateOfBirth": "2003-07-06",
+#     "contactNumber": "1234567890",
+#     "email": "aari@gmail.com",
+#     "address": "123, Dubai Main street, Dubai narrow street, Dubai"
+# }
+
+# POST http://localhost:5000/user/login
+# Content-Type: application/json
+
+# {
+#         "username": "aaari88",
+#     "password": "Welcome@123"
+# }
+
+
+# POST http://localhost:5000/user/register
+# Content-Type: application/json
+
+# {
+#     "username": "barath2003",
+#     "password": "Welcome@123",
+#     "role": "Patient",
+#     "fullName": "Barath Raj C R",
+#     "dateOfBirth": "2003-07-06",
+#     "contactNumber": "1234567890",
+#     "email": "barath69@gmail.com",
+#     "address": "123, Dubai Main street, Dubai narrow street, Dubai"
+# }
+
+# POST http://localhost:5000/user/login
+# Content-Type: application/json
+
+# {
+#     "username": "bharath7327",
+#     "password": "Welcome@123"
+# }
+
+
+
+# POST http://localhost:5000/clinic
+# Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiRG9jdG9yIiwic3ViIjoiYmhhcmF0aDczMjciLCJpYXQiOjE3NjExNDgyMzgsImV4cCI6MTc2MTIzNDYzOH0.AxBZIqRfGIARua4-g3-gwDd8pxfhhMMNcpRjJwSrLs4
+# Content-Type: application/json
+
+# {
+#     "clinicName":"Krishna Mental Hospital",
+#     "location":"Kilpauk",
+#     "doctor": {
+#         "doctorId":7
+#     },
+#     "contactNumber":"9345672511",
+#     "establishedYear":2003
+# }
+
+# POST http://localhost:5000/user/login
+# Content-Type: application/json
+
+# {
+#     "username": "barath2003",
+#     "password": "Welcome@123"
+# }
+
+# POST http://localhost:5000/appointment
+# Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUGF0aWVudCIsInN1YiI6ImJhcmF0aDIwMDMiLCJpYXQiOjE3NjA5ODM3MjIsImV4cCI6MTc2MTA3MDEyMn0.Iz650MVcgH2H-TOqmazYxGL9QBBFvfgT5Av1VnfJcLU
+# Content-Type: application/json
+
+# {
+#     "patient":{
+#         "patientId":2
+#     },
+#     "clinic":{
+#         "clinicId":3
+#     },
+#     "appointmentDate":"2003-12-01",
+#     "status":"Pending",
+#     "purpose":"Count decreased"
+# }
+
+# DELETE http://localhost:5000/patient/2
+# Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUGF0aWVudCIsInN1YiI6ImJhcmF0aDIwMDMiLCJpYXQiOjE3NjA5ODM3MjIsImV4cCI6MTc2MTA3MDEyMn0.Iz650MVcgH2H-TOqmazYxGL9QBBFvfgT5Av1VnfJcLU
+# Content-Type: application/json
+
+
+#-----------Doctor-----------------------
+# POST http://localhost:5000/user/login
+# Content-Type: application/json
+
+# {
+#     "username": "bharath7327",
+#     "password": "Welcome@123"
+# }
+
+# GET http://localhost:5000/doctor/1
+# Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiRG9jdG9yIiwic3ViIjoiYmhhcmF0aDczMjciLCJpYXQiOjE3NjEwNDgwMjAsImV4cCI6MTc2MTEzNDQyMH0.IQb7Gi7iFr6Njtrrcy_lQw2vIkDrkIulxM3ItbzZVt4
+
+# PUT http://localhost:5000/doctor/1
+# Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiRG9jdG9yIiwic3ViIjoiYmhhcmF0aDczMjciLCJpYXQiOjE3NjEwNDgwMjAsImV4cCI6MTc2MTEzNDQyMH0.IQb7Gi7iFr6Njtrrcy_lQw2vIkDrkIulxM3ItbzZVt4
+# Content-Type: application/json
+
+# {
+#     "fullName": "Bharath S",
+#     "specialty": "Opthamology",
+#     "contactNumber": "1234567890",
+#     "email": "bharath7327@gmail.com",
+#     "yearsOfExperience": 10
+# }
+
+# GET http://localhost:5000/doctor
+# Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiRG9jdG9yIiwic3ViIjoiYmhhcmF0aDczMjciLCJpYXQiOjE3NjEwNDgwMjAsImV4cCI6MTc2MTEzNDQyMH0.IQb7Gi7iFr6Njtrrcy_lQw2vIkDrkIulxM3ItbzZVt4
+
+# GET http://localhost:5000/doctor/experience
+# Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiRG9jdG9yIiwic3ViIjoiYmhhcmF0aDczMjciLCJpYXQiOjE3NjEwNDgwMjAsImV4cCI6MTc2MTEzNDQyMH0.IQb7Gi7iFr6Njtrrcy_lQw2vIkDrkIulxM3ItbzZVt4
+
+
+#------------Patient----------------------
+
+# POST http://localhost:5000/user/login
+# Content-Type: application/json
+
+# {
+#     "username": "barath2003",
+#     "password": "Welcome@123"
+# }
+
+# GET http://localhost:5000/patient/6
+# Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUGF0aWVudCIsInN1YiI6ImJhcmF0aDIwMDMiLCJpYXQiOjE3NjEwNTAyMjMsImV4cCI6MTc2MTEzNjYyM30.TeNLwMcsf4xHzYwlFbkC86a93E0gw5xGel8MmIqb4OQ
+
+# GET http://localhost:5000/patient
+# Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUGF0aWVudCIsInN1YiI6ImJhcmF0aDIwMDMiLCJpYXQiOjE3NjEwNTAyMjMsImV4cCI6MTc2MTEzNjYyM30.TeNLwMcsf4xHzYwlFbkC86a93E0gw5xGel8MmIqb4OQ
+
+# PUT http://localhost:5000/patient/12
+# Content-Type: application/json
+# Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUGF0aWVudCIsInN1YiI6ImFhYXJpODgiLCJpYXQiOjE3NjExNTMxNzcsImV4cCI6MTc2MTIzOTU3N30.7sqVi1T5MTSN2PKsBm0xTI8kpTA3CMpddUbbL8wIBSM
+
+# {
+#     "fullName": "Aari Came Ron",
+#     "dateOfBirth": "2003-07-06",
+#     "contactNumber": "1234567890",
+#     "email": "aari@gmail.com",
+#     "address": "123, Dubai"
+# }
+
+
+#------------Clinic------------------------------------
+
+# POST http://localhost:5000/clinic
+# Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiRG9jdG9yIiwic3ViIjoiYmhhcmF0aDczMjciLCJpYXQiOjE3NjA5ODM2MDcsImV4cCI6MTc2MTA3MDAwN30.uzOUmM_4Q3s2tvxgmSjLdDNRszMUOrUvPB_H-t-ZhyU
+# Content-Type: application/json
+
+# {
+#     "clinicName":"Krishna Mental Hospital",
+#     "location":"Kilpauk",
+#     "doctor": {
+#         "doctorId":1
+#     },
+#     "contactNumber":"9345672511",
+#     "establishedYear":2003
+# }
+
+# GET http://localhost:5000/clinic/doctor/7
+# Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiRG9jdG9yIiwic3ViIjoiYmhhcmF0aDczMjciLCJpYXQiOjE3NjExNDgyMzgsImV4cCI6MTc2MTIzNDYzOH0.AxBZIqRfGIARua4-g3-gwDd8pxfhhMMNcpRjJwSrLs4
+# Content-Type: application/json
+
+# GET http://localhost:5000/clinic/2
+# Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiRG9jdG9yIiwic3ViIjoiYmhhcmF0aDczMjciLCJpYXQiOjE3NjExNDgyMzgsImV4cCI6MTc2MTIzNDYzOH0.AxBZIqRfGIARua4-g3-gwDd8pxfhhMMNcpRjJwSrLs4
+# Content-Type: application/json
+
+# GET http://localhost:5000/clinic/location/chennai
+# Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiRG9jdG9yIiwic3ViIjoiYmhhcmF0aDczMjciLCJpYXQiOjE3NjExNDgyMzgsImV4cCI6MTc2MTIzNDYzOH0.AxBZIqRfGIARua4-g3-gwDd8pxfhhMMNcpRjJwSrLs4
+# Content-Type: application/json
+
+# GET http://localhost:5000/clinic
+# Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiRG9jdG9yIiwic3ViIjoiYmhhcmF0aDczMjciLCJpYXQiOjE3NjExNTE3OTYsImV4cCI6MTc2MTIzODE5Nn0.5jQB9gfo9Ggq7yb9AqGLcniV1FSeQSr9JVxrsqac18Y
+# Content-Type: application/json
+
+
+# PUT http://localhost:5000/clinic/9
+# Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiRG9jdG9yIiwic3ViIjoiYmhhcmF0aDczMjciLCJpYXQiOjE3NjExNDgyMzgsImV4cCI6MTc2MTIzNDYzOH0.AxBZIqRfGIARua4-g3-gwDd8pxfhhMMNcpRjJwSrLs4
+# Content-Type: application/json
+
+# {
+#     "clinicName":"Krishna Mental",
+#     "location":"Kilpauk Gaarden",
+#     "doctorId":7,
+#     "contactNumber":"9345672511",
+#     "establishedYear":2003
+# }
+
+#-------------------------------------------
+
+
+# POST http://localhost:5000/user/login
+# Content-Type: application/json
+
+# {
+#     "username": "doctor",
+#     "password": "Doctor@123"
+# }
+
+# GET http://localhost:5000/clinic/doctor/5
+# Content-Type: application/json
+# Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiRE9DVE9SIiwic3ViIjoiZG9jdG9yIiwiaWF0IjoxNzYxMTUwNjI4LCJleHAiOjE3NjEyMzcwMjh9.OwpGNLFHCr1bVoJETPPTTeXXZLgdM4jC8MNCVPrzNB8
+
+# {
+#     "clinicId": 15,
+#   "clinicName": "Vasudeva Hospital",
+#   "location": "vemulawada",
+#   "contactNumber": "9876543211",
+#   "establishedYear": 2017,
+#   "doctorId": 1
+# }
+
+# "doctorId": 5,
+# {
+#     "patientId": 1,
+#     "fullName": "Lti mindtree",
+#     "dateOfBirth": "17-04-2019",
+#     "contactNumber": "7607071130",
+#     "email": "sample798@gmail.com",
+#     "address": "odisha"
+#   }
+
+# {
+#     "fullName": "Gautam verma",
+#     "specialty": "Surgeon",
+#     "contactNumber": "7607071130",
+#     "email": "developergautam41@gmail.com",
+#     "yearsOfExperience": 2
+#   }
+
+# GET http://localhost:5000/doctor
+# Content-Type: application/json
+# Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiZG9jdG9yIiwic3ViIjoiZGFtb24iLCJpYXQiOjE3NTk5NDU1MjEsImV4cCI6MTc2MDAzMTkyMX0.cIwf4aAMy4YceTVvvqdQXtlux0_IUPwHDkFYscylWy0
+
+# {
+#     "fullName": "Avinash Yennam",
+#      "specialty": "Neuro Surgeon",
+#   "contactNumber": "9876543212",
+#   "email": "yennam@gmail.com",
+#   "yearsOfExperience": 6
+# }
+
+
+
+# POST http://localhost:5000/user/register
+# Content-Type: application/json
+
+# {
+#     "username": "damon",
+#     "password": "damon123",
+#      "role": "doctor",
+#      "fullName": "Damon Salvatour",
+#      "contactNumber": "9876543212",
+#      "email": "damon@gmail.com",
+#      "address": "Mystic falls",
+#      "dateOfBirth": "23-10-2001",
+#      "specialty": "Surgeon",
+#      "yearsOfExperience": 5
+# }
+
+# {
+#     "fullName": "Bishnu raut",
+#     "dateOfBirth": "23-10-2001",
+#     "contactNumber": "9876543212",
+#     "email": "bishnu@gmail.com",
+#     "address": "puri"
+# }
+
+
+    # "role": "patient",
+    # "fullName": "Bishnu raut",
+    # "contactNumber": "9876543212",
+    # "email": "bishnu@gmail.com",
+    # "address": "puri",
+    # "dateOfBirth": "23-10-2001",
+    # "specialty": "Surgeon",
+    # "yearsOfExperience": 5

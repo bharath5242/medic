@@ -1,0 +1,58 @@
+<div class="container">
+    <form [formGroup]="doctorForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label>Doctor ID:</label>
+            <input type="string" formControlName="doctorId" name="doctorId" />
+            <div *ngIf="submitted && doctorForm.controls['doctorId'].invalid">
+                Doctor ID is required and must be greater than 0.
+            </div>
+        </div>
+
+        <div>
+            <label>Full Name:</label>
+            <input type="text" formControlName="fullName" name="name" />
+            <div *ngIf="submitted && doctorForm.controls['fullName'].invalid">
+                Full Name is required and must be at least 2 characters.
+            </div>
+        </div>
+
+        <div>
+            <label>Specialty:</label>
+            <input type="text" formControlName="specialty" name="speciality" />
+            <div *ngIf="submitted && doctorForm.controls['specialty'].invalid">
+                Specialty is required.
+            </div>
+        </div>
+
+        <div>
+            <label>Contact Number:</label>
+            <input type="text" formControlName="contactNumber" name="mobile" />
+            <div *ngIf="submitted && doctorForm.controls['contactNumber'].invalid">
+                Contact Number must be exactly 10 digits.
+            </div>
+        </div>
+
+        <div>
+            <label>Email:</label>
+            <input type="email" formControlName="email" name="email" />
+            <div *ngIf="submitted && doctorForm.controls['email'].invalid">
+                Valid Email is required.
+            </div>
+        </div>
+
+        <div>
+            <label>Years of Experience:</label>
+            <input type="text" formControlName="yearsOfExperience" name="yearsOfExperience" />
+            <div *ngIf="submitted && doctorForm.controls['yearsOfExperience'].invalid">
+                Experience is required and must be greater than 0.
+            </div>
+        </div>
+
+        <button type="submit" [disabled]="doctorForm.invalid">Submit</button>
+        <button [routerLink]="['/dashboard']">Back to dashboard</button>
+        <button type="button" (click)="resetForm()">Reset</button>
+
+        <p *ngIf="successMessage" class="success-message">{{ successMessage }}</p>
+        <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+    </form>
+</div>

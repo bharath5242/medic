@@ -1,0 +1,60 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8"> <!-- Adjust width here -->
+            <form [formGroup]="clinicForm" (ngSubmit)="onSubmit()" class="p-4 border rounded bg-light">
+
+                <!-- Clinic Name -->
+                <div class="mb-3">
+                    <label class="form-label">Clinic Name:</label>
+                    <input type="text" class="form-control" formControlName="clinicName" />
+                    <div *ngIf= "clinicForm.get('clinicName')?.invalid && (clinicForm.get('clinicName')?.touched || clinicForm.get('clinicName')?.dirty || submitted)"
+                        class="text-danger mt-1">
+                        Clinic Name is required and must be at least 2 characters.
+                    </div>
+                </div>
+
+                <!-- Location -->
+                <div class="mb-3">
+                    <label class="form-label">Location:</label>
+                    <input type="text" class="form-control" formControlName="location" />
+                    <div *ngIf="clinicForm.get('location')?.invalid && (clinicForm.get('location')?.touched || clinicForm.get('location')?.dirty || submitted)"
+                        class="text-danger mt-1">
+                        Location is required.
+                    </div>
+                </div>
+
+                <!-- Contact Number -->
+                <div class="mb-3">
+                    <label class="form-label">Contact Number:</label>
+                    <input type="text" class="form-control" formControlName="contactNumber" />
+                    <div *ngIf="clinicForm.get('contactNumber')?.invalid && (clinicForm.get('contactNumber')?.touched || clinicForm.get('contactNumber')?.dirty || submitted)"
+                        class="text-danger mt-1">
+                        Contact Number must be exactly 10 digits.
+                    </div>
+                </div>
+
+                <!-- Established Year -->
+                <div class="mb-3">
+                    <label class="form-label">Established Year:</label>
+                    <input type="text" class="form-control" formControlName="establishedYear" />
+                    <div *ngIf="clinicForm.get('establishedYear')?.invalid && (clinicForm.get('establishedYear')?.touched || clinicForm.get('establishedYear')?.dirty || submitted)"
+                        class="text-danger mt-1">
+                        Enter a valid year (e.g., 1990, 2020).
+                    </div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="d-flex gap-2 mt-4">
+                    <button type="submit" class="btn btn-primary" [disabled]="clinicForm.invalid"
+                        (click)="onSubmit()">Submit</button>
+                    <button type="button" class="btn btn-outline-danger" (click)="resetForm()">Reset</button>
+                </div>
+
+                <!-- Messages -->
+                <p *ngIf="successMessage" class="alert alert-success mt-3">{{ successMessage }}</p>
+                <p *ngIf="errorMessage" class="alert alert-danger mt-3">{{ errorMessage }}</p>
+
+            </form>
+        </div>
+    </div>
+</div>

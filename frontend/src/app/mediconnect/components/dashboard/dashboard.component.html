@@ -1,0 +1,186 @@
+<navbar></navbar>
+<div class="container mt-4" *ngIf="role === 'PATIENT'">
+    <!-- Patient Details Card -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card shadow-sm mb-4 border-0">
+                    <div
+                        class="card-header bg-gradient bg-primary text-white d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Patient Profile</h5>
+                        <!-- <span class="badge bg-light text-primary">{{ patientDetails.patientId }}</span> -->
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title mb-2">{{ patientDetails.fullName }}</h5>
+                        <p class="card-text mb-2">
+                            <i class="bi bi-envelope-fill me-2 text-primary"></i><strong>Email:</strong> {{
+                            patientDetails.email }}<br>
+                            <i class="bi bi-telephone-fill me-2 text-primary"></i><strong>Phone:</strong> {{
+                            patientDetails.contactNumber }}<br>
+                            <i class="bi bi-calendar-heart-fill me-2 text-primary"></i><strong>DOB:</strong> {{
+                            patientDetails.dateOfBirth | date }}
+                        </p>
+                        <div class="d-flex gap-2 mt-3">
+                            <button class="btn btn-outline-primary" (click)="navigateToEditPatient()">
+                                <i class="bi bi-pencil-square me-1"></i> Edit Account
+                            </button>
+                            <button class="btn btn-outline-danger" (click)="deletePatient()">
+                                <i class="bi bi-trash3 me-1"></i> Delete Account
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Appointments Section -->
+    <div class="mb-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5>Your Appointments</h5>
+        </div>
+
+        <div *ngIf="appointments.length; else noAppointments">
+            <div class="row">
+                <div class="col-md-6 mb-3" *ngFor="let appt of appointments">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ appt.clinic.clinicName }}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Dr. {{ appt.clinic.doctor.fullName }}</h6>
+                            <p class="card-text">
+                                <strong>Date:</strong> {{ appt.appointmentDate | date: 'mediumDate' }}<br>
+                                <strong>Purpose:</strong> {{ appt.purpose }}<br>
+                                <strong>Status:</strong> {{ appt.status }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ng-template #noAppointments>
+            <p class="text-muted">No appointments scheduled.</p>
+        </ng-template>
+    </div>
+
+    <!-- Clinics Section -->
+    <div>
+        <h5 class="mb-3">Available Clinics</h5>
+        <div class="container py-4" *ngIf="clinics.length; else noClinics">
+            <div class="row">
+                <div class="col-md-6 mb-4" *ngFor="let clinic of clinics">
+                    <div class="card shadow-sm border-0">
+                        <div class="p-3 rounded-top" style="background-color: #20c997; color: white;">
+                            <h4 class="mb-0">{{ clinic.clinicName }}</h4>
+                            <small>Established: {{ clinic.establishedYear }} | {{ clinic.location }}</small>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Clinic Details</h5>
+                            <p><strong>Contact:</strong> {{ clinic.contactNumber }}</p>
+
+                            <hr>
+
+                            <h5 class="card-title">Doctor Details</h5>
+                            <div class="d-flex flex-wrap gap-3">
+                                <div><strong>Name:</strong> {{ clinic.doctor.fullName }}</div>
+                                <div><strong>Specialty:</strong> <span class="text-success fw-bold">{{
+                                        clinic.doctor.specialty }}</span></div>
+                                <div><strong>Experience:</strong> {{ clinic.doctor.yearsOfExperience }} yrs</div>
+                                <div><strong>Email:</strong> <a [href]="'mailto:' + clinic.doctor.email">{{
+                                        clinic.doctor.email }}</a></div>
+                                <div><strong>Contact:</strong> {{ clinic.doctor.contactNumber }}</div>
+                            </div>
+
+                            <div class="text-end mt-3">
+                                <button class="btn btn-outline-success" (click)="bookAppointment(clinic.clinicId)">
+                                    Book Appointment
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ng-template #noClinics>
+            <p class="text-muted">No Clinics available.</p>
+        </ng-template>
+    </div>
+</div>
+
+<div class="container mt-4" *ngIf="role === 'DOCTOR'">
+    <div class="card shadow-sm mb-4">
+        <div class="card-header bg-success text-white">
+            <h5 class="mb-0">Doctor Profile</h5>
+        </div>
+        <div class="card-body">
+            <h6 class="card-title">{{ doctorDetails.fullName }}</h6>
+            <p class="card-text">
+                <strong>Email:</strong> {{ doctorDetails.email }}<br>
+                <strong>Phone:</strong> {{ doctorDetails.contactNumber }}<br>
+                <strong>Specialization:</strong> {{ doctorDetails.specialty }} <br>
+                <strong>Years of experience:</strong> {{ doctorDetails.yearsOfExperience }}
+            </p>
+            <div class="d-flex gap-2">
+                <button class="btn btn-outline-success" (click)="editDoctor()">Edit Account</button>
+                <button class="btn btn-outline-danger" (click)="deleteDoctor()">Delete Account</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5>Your Clinics</h5>
+            <button class="btn btn-primary" (click)="createClinic()">Create Clinic</button>
+        </div>
+
+        <div *ngIf="clinics.length !== 0; else noClinics">
+            <div class="row">
+                <div class="col-md-4 mb-3" *ngFor="let clinic of clinics">
+                    <div class="card h-100" (click)="onClinicSelect(clinic)">
+                        <div class="card-body">
+                            <h6 class="card-title">{{ clinic.clinicName }}</h6>
+                            <p class="card-text">{{ clinic.location }}</p>
+                            <div class="d-flex justify-content-between mt-3">
+                                <button class="btn btn-sm btn-outline-primary"
+                                    [routerLink]="['/clinic-edit', clinic.clinicId]">Edit</button>
+                                <button class="btn btn-sm btn-outline-danger"
+                                    (click)="deleteClinic(clinic.clinicId); $event.stopPropagation();">Delete</button>
+                            </div>
+                        </div>
+
+                        <!-- Appointments Section -->
+                        <div *ngIf="selectedClinicId === clinic.clinicId && selectClinicAppointments.length > 0"
+                            class="card-footer bg-light">
+                            <h6 class="fw-bold">Appointments</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item" *ngFor="let appt of selectClinicAppointments">
+                                    <strong>Patient:</strong> {{ appt.patient.fullName }}<br>
+                                    <strong>Date:</strong> {{ appt.appointmentDate | date: 'mediumDate' }}<br>
+                                    <strong>Purpose:</strong> {{ appt.purpose }}<br>
+                                    <strong>Status:</strong> {{ appt.status }}
+
+
+                                    <!-- Delete Button -->
+                                    <!-- <button class="btn btn-sm btn-danger mt-2"
+                                        (click)="cancelAppointment(appt)">
+                                        Delete
+                                    </button> -->
+
+                                </li>
+                            </ul>
+                        </div>
+                        <div *ngIf="selectedClinicId === clinic.clinicId && selectClinicAppointments.length === 0"
+                            class="card-footer text-muted">
+                            No appointments found.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ng-template #noClinics>
+            <p class="text-muted">No clinics available.</p>
+        </ng-template>
+    </div>
+</div>

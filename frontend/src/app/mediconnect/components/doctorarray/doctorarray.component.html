@@ -1,0 +1,17 @@
+<div class="doctor-list">
+    <button (click)="toggleDetails()">
+      {{ showDetails ? 'Hide Details' : 'Show Details' }}
+    </button>
+  
+    <ul>
+      <li *ngFor="let doctor of doctors">
+        <strong>{{ doctor.fullName }}</strong> - {{ doctor.specialty }}
+  
+        <div *ngIf="showDetails">
+          <p>Contact Number: {{ doctor.contactNumber }}</p>
+          <p>Email: {{ doctor.email }}</p>
+          <p>Years of Experience: {{ doctor.yearsOfExperience }}</p>
+        </div>
+      </li>
+    </ul>
+  </div>

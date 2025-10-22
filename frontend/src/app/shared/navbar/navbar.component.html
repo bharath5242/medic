@@ -1,0 +1,10 @@
+<nav class="navbar navbar-dark bg-primary px-3" style="text-align: center">
+    <span class="navbar-brand mb-0 h1">
+        <h4 >Mediconnect</h4>
+    </span>
+
+    <button *ngIf="isAuthenticated" class="btn btn-outline-light" (click)="logout()">
+        Logout
+    </button>
+</nav>
+

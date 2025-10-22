@@ -1,0 +1,189 @@
+<div class="registration-container">
+    <h2>Register</h2>
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+        <!-- Role Selection -->
+        <div class="form-group">
+            <label for="role">Role</label>
+            <select id="role" formControlName="role" (change)="onRoleChange($event)" class="form-control" [ngClass]="{
+            'is-invalid': registrationForm.get('role')?.invalid && registrationForm.get('role')?.touched
+          }">
+                <option value="" disabled>Select Role</option>
+                <option value="DOCTOR">Doctor</option>
+                <option value="PATIENT">Patient</option>
+            </select>
+            <div *ngIf="registrationForm.get('role')?.invalid && registrationForm.get('role')?.touched"
+                class="error-message">
+                Role is required.
+            </div>
+        </div>
+
+        <!-- Username Field -->
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input id="username" type="text" formControlName="username" class="form-control" [ngClass]="{
+            'is-invalid':  registrationForm.get('username')?.invalid && registrationForm.get('username')?.touched
+          }" />
+            <!-- is-valid => This is a Bootstrap class that highlights the input in red to indicate an error. -->
+            <div *ngIf="registrationForm.get('username')?.invalid && registrationForm.get('username')?.touched"
+                class="error-message">
+                <div *ngIf="registrationForm.get('username')?.errors?.['required']">
+                    Username is required.
+                </div>
+                <div *ngIf="registrationForm.get('username')?.errors?.['pattern']">
+                    Username cannot contain special characters.
+                </div>
+            </div>
+        </div>
+
+        <!-- Password Field -->
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input id="password" type="password" formControlName="password" class="form-control" [ngClass]="{
+            'is-invalid':
+              registrationForm.get('password')?.invalid && registrationForm.get('password')?.touched
+          }" />
+            <div *ngIf="registrationForm.get('password')?.invalid && registrationForm.get('password')?.touched"
+                class="error-message">
+                <div *ngIf="registrationForm.get('password')?.errors?.['required']">
+                    Password is required.
+                </div>
+                <div *ngIf="registrationForm.get('password')?.errors?.['minlength']">
+                    Password must be at least 8 characters long.
+                </div>
+                <div *ngIf="registrationForm.get('password')?.errors?.['pattern']">
+                    Password must contain at least one capital letter and one number.
+                </div>
+            </div>
+        </div>
+
+        <!-- Full Name Field -->
+        <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input id="fullName" type="text" formControlName="fullName" class="form-control" [ngClass]="{
+            'is-invalid':
+              registrationForm.get('fullName')?.invalid && registrationForm.get('fullName')?.touched
+          }" />
+            <div *ngIf="registrationForm.get('fullName')?.invalid && registrationForm.get('fullName')?.touched"
+                class="error-message">
+                Full Name is required.
+            </div>
+        </div>
+
+        <!-- Contact Number Field -->
+        <div class="form-group">
+            <label for="contactNumber">Contact Number</label>
+            <input id="contactNumber" type="text" formControlName="contactNumber" class="form-control" [ngClass]="{
+            'is-invalid':
+              registrationForm.get('contactNumber')?.invalid && registrationForm.get('contactNumber')?.touched
+          }" />
+            <div *ngIf="
+            registrationForm.get('contactNumber')?.invalid &&
+            registrationForm.get('contactNumber')?.touched
+          " class="error-message">
+                <div *ngIf="registrationForm.get('contactNumber')?.errors?.['required']">
+                    Contact Number is required.
+                </div>
+                <div *ngIf="registrationForm.get('contactNumber')?.errors?.['pattern']">
+                    Enter a valid phone number (e.g., 1234567890).
+                </div>
+            </div>
+        </div>
+
+        <!-- Email Field -->
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" type="email" formControlName="email" class="form-control" [ngClass]="{
+            'is-invalid': registrationForm.get('email')?.invalid && registrationForm.get('email')?.touched
+          }" />
+            <div *ngIf="registrationForm.get('email')?.invalid && registrationForm.get('email')?.touched"
+                class="error-message">
+                <div *ngIf="registrationForm.get('email')?.errors?.['required']">
+                    Email is required.
+                </div>
+                <div *ngIf="registrationForm.get('email')?.errors?.['email']">
+                    Enter a valid email address.
+                </div>
+            </div>
+        </div>
+
+        <!-- Doctor-Specific Fields -->
+        <div *ngIf="selectedRole === 'DOCTOR'" class="role-specific">
+            <div class="form-group">
+                <label for="specialty">Specialty</label>
+                <input id="specialty" type="text" formControlName="specialty" class="form-control" [ngClass]="{
+              'is-invalid':
+                registrationForm.get('specialty')?.invalid && registrationForm.get('specialty')?.touched
+            }" />
+                <div *ngIf="
+              registrationForm.get('specialty')?.invalid && registrationForm.get('specialty')?.touched
+            " class="error-message">
+                    Specialty is required.
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="yearsOfExperience">Years of Experience</label>
+                <input id="yearsOfExperience" type="number" formControlName="yearsOfExperience" class="form-control"
+                    [ngClass]="{
+              'is-invalid':
+                registrationForm.get('yearsOfExperience')?.invalid &&
+                registrationForm.get('yearsOfExperience')?.touched
+            }" />
+                <div *ngIf="
+              registrationForm.get('yearsOfExperience')?.invalid &&
+              registrationForm.get('yearsOfExperience')?.touched
+            " class="error-message">
+                    Years of Experience is required and must be a number.
+                </div>
+            </div>
+        </div>
+
+        <!-- Patient-Specific Fields -->
+        <div *ngIf="selectedRole === 'PATIENT'" class="role-specific">
+            <div class="form-group">
+                <label for="dateOfBirth">Date of Birth</label>
+                <input id="dateOfBirth" type="date" formControlName="dateOfBirth" class="form-control" [ngClass]="{
+              'is-invalid':
+                registrationForm.get('dateOfBirth')?.invalid &&
+                registrationForm.get('dateOfBirth')?.touched
+            }" />
+                <div *ngIf="
+              registrationForm.get('dateOfBirth')?.invalid &&
+              registrationForm.get('dateOfBirth')?.touched
+            " class="error-message">
+                    Date of Birth is required.
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input id="address" type="text" formControlName="address" class="form-control" [ngClass]="{
+              'is-invalid':
+                registrationForm.get('address')?.invalid && registrationForm.get('address')?.touched
+            }" />
+                <div *ngIf="
+              registrationForm.get('address')?.invalid && registrationForm.get('address')?.touched
+            " class="error-message">
+                    Address is required.
+                </div>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary" [disabled]="registrationForm.invalid">
+            Register
+        </button>
+
+        <div class="mt-3 text-center">
+            <a routerLink="/login" class="btn btn-link">Already have an account? Login here</a>
+        </div>
+
+        <!-- Success/Error Messages -->
+        <div *ngIf="successMessage" class="success-message">
+            {{ successMessage }}
+        </div>
+        <div *ngIf="errorMessage" class="error-message">
+            {{ errorMessage }}
+        </div>
+    </form>
+</div>

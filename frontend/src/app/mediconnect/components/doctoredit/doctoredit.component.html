@@ -1,0 +1,97 @@
+<div class="container mt-4">
+    <div class="card shadow-sm">
+      <div class="card-header bg-primary text-white">
+        <h4>Update Doctor</h4>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="doctorForm" (ngSubmit)="onSubmit()">
+ 
+          <!-- Full Name -->
+          <div class="mb-3">
+            <label for="fullName" class="form-label">Full Name</label>
+            <input type="text" id="fullName" class="form-control" formControlName="fullName" />
+            <div class="text-danger mt-1"
+                 *ngIf="(submitted || doctorForm.get('fullName')?.touched) && doctorForm.get('fullName')?.invalid">
+              Full Name is required and must have at least 2 characters.
+            </div>
+          </div>
+ 
+          <!-- Username -->
+          <!-- <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" id="username" class="form-control" formControlName="username" />
+            <div class="text-danger mt-1"
+                 *ngIf="(submitted || doctorForm.get('username')?.touched) && doctorForm.get('username')?.invalid">
+              <small *ngIf="doctorForm.get('username')?.hasError('required')">Username is required.</small>
+              <small *ngIf="doctorForm.get('username')?.hasError('pattern')">Username cannot contain special characters.</small>
+            </div>
+          </div> -->
+ 
+          <!-- Password -->
+          <!-- <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" id="password" class="form-control" formControlName="password" />
+            <div class="text-danger mt-1"
+                 *ngIf="(submitted || doctorForm.get('password')?.touched) && doctorForm.get('password')?.invalid">
+              <small *ngIf="doctorForm.get('password')?.hasError('required')">Password is required.</small>
+              <small *ngIf="doctorForm.get('password')?.hasError('minlength')">Password must be at least 8 characters long.</small>
+              <small *ngIf="doctorForm.get('password')?.hasError('pattern')">Password must contain at least one capital letter and one numeric digit.</small>
+            </div>
+          </div> -->
+ 
+          <!-- Specialty -->
+          <div class="mb-3">
+            <label for="specialty" class="form-label">Specialty</label>
+            <input type="text" id="specialty" class="form-control" formControlName="specialty" />
+            <div class="text-danger mt-1"
+                 *ngIf="(submitted || doctorForm.get('specialty')?.touched) && doctorForm.get('specialty')?.invalid">
+              Specialty is required.
+            </div>
+          </div>
+ 
+          <!-- Contact Number -->
+          <div class="mb-3">
+            <label for="contactNumber" class="form-label">Contact Number</label>
+            <input type="text" id="contactNumber" class="form-control" formControlName="contactNumber"
+                   maxlength="10" pattern="\d*" (keypress)="allowOnlyDigits($event)" />
+            <div class="text-danger mt-1"
+                 *ngIf="(submitted || doctorForm.get('contactNumber')?.touched) && doctorForm.get('contactNumber')?.invalid">
+              Contact Number is required and must be a 10-digit number.
+            </div>
+          </div>
+ 
+          <!-- Email -->
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" class="form-control" formControlName="email"/>
+            <div class="text-danger mt-1"
+                 *ngIf="(submitted || doctorForm.get('email')?.touched) && doctorForm.get('email')?.invalid">
+                 Email is required and must be valid.
+            </div>
+          </div>
+         
+          <!-- Years of Experience -->
+          <div class="mb-3">
+            <label for="yearsOfExperience" class="form-label">Years of Experience</label>
+            <input type="number" id="yearsOfExperience" class="form-control" formControlName="yearsOfExperience" />
+            <div class="text-danger mt-1"
+                 *ngIf="(submitted || doctorForm.get('yearsOfExperience')?.touched) && doctorForm.get('yearsOfExperience')?.invalid">
+              Years of Experience is required and must be greater than 0.
+            </div>
+          </div>
+ 
+          <!-- Actions -->
+          <div class="d-flex gap-2">
+            <button type="submit" class="btn btn-success">Submit</button>
+            <a routerLink="/mediconnect/dashboard" class="btn btn-secondary">Dashboard</a>
+          </div>
+ 
+          <!-- Messages -->
+          <div *ngIf="successMessage" class="alert alert-success mt-3">{{ successMessage }}</div>
+          <div *ngIf="errorMessage" class="alert alert-danger mt-3">{{ errorMessage }}</div>
+ 
+        </form>
+      </div>
+    </div>
+  </div>
+ 
