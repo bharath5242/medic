@@ -1,68 +1,13 @@
-<!-- <div class="form-container">
-    <h2>Create Appointment</h2>
-    <form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
-
-        <div class="form-group">
-            <label for="patientId">Patient:</label>
-            <input type="number" id="patientId" formControlName="patientId" />
-        </div>
-
-        <div class="form-group">
-            <label for="clinic">Clinic:</label>
-            <select formControlName="clinic">
-                <option value="">Select a Clinic</option>
-                <option *ngFor="let clinic of clinics" [ngValue]="clinic">
-                    {{ clinic.clinicName }}
-                </option>
-            </select>
-        </div>
-
-        <div class="form-group">
-            <label for="appointmentDate">Appointment Date:</label>
-            <input type="date" id="appointmentDate" formControlName="appointmentDate" />
-            <div
-                *ngIf="appointmentForm.controls['appointmentDate'].invalid && appointmentForm.controls['appointmentDate'].touched">
-                Appointment date is required.
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label for="status">Status:</label>
-            <input type="text" id="status" formControlName="status" />
-            <div *ngIf="appointmentForm.controls['status'].invalid && appointmentForm.controls['status'].touched">
-                Status is required.
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label for="purpose">Purpose:</label>
-            <textarea id="purpose" formControlName="purpose"></textarea>
-            <div *ngIf="appointmentForm.controls['purpose'].invalid && appointmentForm.controls['purpose'].touched">
-                Purpose must be at least 5 characters long.
-            </div>
-        </div>
-
-        <div class="form-actions">
-            <button type="submit" [disabled]="appointmentForm.invalid">Submit</button>
-        </div>
-        <div class="form-footer">
-            <a routerLink="/mediconnect" class="link">Dashboard</a>
-        </div>
-    </form>
-    <div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>
-    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
-</div> -->
-
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card shadow-sm">
-                <!-- BLUE HEADER (SAME AS REGISTRATION/LOGIN) -->
+                
                 <div class="card-header bg-primary text-white">
                     <h4 class="mb-0">Create Appointment</h4>
                 </div>
                 <div class="card-body">
-                    <!-- Success/Error Messages -->
+                   
                     <div *ngIf="successMessage" class="alert alert-success" role="alert">
 
                         {{ successMessage }}
@@ -74,15 +19,15 @@
 
                     <form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
 
-                        <!-- Patient ID (Disabled - Read Only) -->
+                       
                         <div class="mb-3">
                             <label class="form-label">Patient ID</label>
                             <input type="text" class="form-control" formControlName="patientId" readonly />
                         </div>
 
-                        <!-- Clinic Selection -->
+                       
                         <div class="mb-3">
-                            <!-- <label class="form-label">Select Clinic</label> -->
+                            
                             <div class="mb-3">
                                 <label class="form-label">Selected Clinic</label>
                                 <div class="form-control bg-light">
@@ -96,7 +41,7 @@
                             </div>
                         </div>
 
-                        <!-- Appointment Date -->
+                     
                         <div class="mb-3">
                             <label class="form-label">Appointment Date</label>
                             <input type="date" class="form-control" formControlName="appointmentDate" />
@@ -107,7 +52,7 @@
                             </div>
                         </div>
 
-                        <!-- Status -->
+                      
                         <div class="mb-3">
                             <label class="form-label">Status</label>
                             <select class="form-select" formControlName="status" [disabled]="true">
@@ -116,7 +61,7 @@
                             <small class="text-muted">Status will be updated after doctor confirmation</small>
                         </div>
 
-                        <!-- Purpose -->
+                 
                         <div class="mb-3">
                             <label class="form-label">Purpose of Visit</label>
                             <textarea class="form-control" rows="3" formControlName="purpose"
@@ -128,7 +73,7 @@
                             </div>
                         </div>
 
-                        <!-- Buttons -->
+                     
                         <div class="d-flex gap-2 mt-4">
                             <button type="submit" class="btn btn-primary" [disabled]="appointmentForm.invalid">
                                 <i class="fas fa-calendar-plus"></i> Book Appointment

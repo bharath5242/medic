@@ -15,15 +15,6 @@ public class Configurations {
         return new BCryptPasswordEncoder();
     }
 
-    // @Override
-    // public void addCorsMappings(CorsRegistry registry) {
-    // registry.addMapping("/**")
-    // .allowedOrigins("*")
-    // .allowedMethods("GET", "POST", "PUT", "DELETE")
-    // .allowedHeaders("*");
-    // // .allowCredentials(true);
-    // }
-
     @Bean
     WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
@@ -33,7 +24,6 @@ public class Configurations {
                         .allowedOrigins("*")
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*");
-                        // .allowCredentials(true);
             }
         };
     }

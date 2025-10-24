@@ -35,7 +35,6 @@ public class Clinic {
         this.clinicId = clinicId;
         this.clinicName = clinicName;
         this.location = location;
-        // this.doctorId = doctorId;
         this.contactNumber = contactNumber;
         this.establishedYear = establishedYear;
     }

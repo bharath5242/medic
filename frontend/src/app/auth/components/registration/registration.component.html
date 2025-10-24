@@ -1,7 +1,7 @@
 <div class="registration-container">
     <h2>Register</h2>
     <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
-        <!-- Role Selection -->
+        
         <div class="form-group">
             <label for="role">Role</label>
             <select id="role" formControlName="role" (change)="onRoleChange($event)" class="form-control" [ngClass]="{
@@ -17,13 +17,13 @@
             </div>
         </div>
 
-        <!-- Username Field -->
+        
         <div class="form-group">
             <label for="username">Username</label>
             <input id="username" type="text" formControlName="username" class="form-control" [ngClass]="{
             'is-invalid':  registrationForm.get('username')?.invalid && registrationForm.get('username')?.touched
           }" />
-            <!-- is-valid => This is a Bootstrap class that highlights the input in red to indicate an error. -->
+            
             <div *ngIf="registrationForm.get('username')?.invalid && registrationForm.get('username')?.touched"
                 class="error-message">
                 <div *ngIf="registrationForm.get('username')?.errors?.['required']">
@@ -35,7 +35,7 @@
             </div>
         </div>
 
-        <!-- Password Field -->
+      
         <div class="form-group">
             <label for="password">Password</label>
             <input id="password" type="password" formControlName="password" class="form-control" [ngClass]="{
@@ -56,7 +56,7 @@
             </div>
         </div>
 
-        <!-- Full Name Field -->
+      
         <div class="form-group">
             <label for="fullName">Full Name</label>
             <input id="fullName" type="text" formControlName="fullName" class="form-control" [ngClass]="{
@@ -69,7 +69,7 @@
             </div>
         </div>
 
-        <!-- Contact Number Field -->
+   
         <div class="form-group">
             <label for="contactNumber">Contact Number</label>
             <input id="contactNumber" type="text" formControlName="contactNumber" class="form-control" [ngClass]="{
@@ -89,7 +89,7 @@
             </div>
         </div>
 
-        <!-- Email Field -->
+     
         <div class="form-group">
             <label for="email">Email</label>
             <input id="email" type="email" formControlName="email" class="form-control" [ngClass]="{
@@ -106,7 +106,7 @@
             </div>
         </div>
 
-        <!-- Doctor-Specific Fields -->
+        
         <div *ngIf="selectedRole === 'DOCTOR'" class="role-specific">
             <div class="form-group">
                 <label for="specialty">Specialty</label>
@@ -138,7 +138,7 @@
             </div>
         </div>
 
-        <!-- Patient-Specific Fields -->
+        
         <div *ngIf="selectedRole === 'PATIENT'" class="role-specific">
             <div class="form-group">
                 <label for="dateOfBirth">Date of Birth</label>
@@ -169,7 +169,7 @@
             </div>
         </div>
 
-        <!-- Submit Button -->
+       
         <button type="submit" class="btn btn-primary" [disabled]="registrationForm.invalid">
             Register
         </button>
@@ -178,7 +178,7 @@
             <a routerLink="/login" class="btn btn-link">Already have an account? Login here</a>
         </div>
 
-        <!-- Success/Error Messages -->
+        
         <div *ngIf="successMessage" class="success-message">
             {{ successMessage }}
         </div>

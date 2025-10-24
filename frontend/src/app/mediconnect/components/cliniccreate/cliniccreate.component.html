@@ -1,14 +1,6 @@
 <div class="container mt-5">
   <form [formGroup]="clinicForm" (ngSubmit)="onSubmit()" class="p-4 border rounded bg-light">
 
-    <!-- <div class="mb-3">
-      <label class="form-label">Clinic ID:</label>
-      <input type="number" class="form-control" formControlName="clinicId" />
-      <div *ngIf="submitted && clinicForm.controls['clinicId'].invalid" class="text-danger mt-1">
-        Clinic ID is required and must be greater than 0.
-      </div>
-    </div> -->
-
     <div class="mb-3">
       <label class="form-label">Clinic Name:</label>
       <input type="text" class="form-control" formControlName="clinicName" />

@@ -1,6 +1,6 @@
 <navbar></navbar>
 <div class="container mt-4" *ngIf="role === 'PATIENT'">
-    <!-- Patient Details Card -->
+    
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8 col-lg-6">
@@ -8,7 +8,7 @@
                     <div
                         class="card-header bg-gradient bg-primary text-white d-flex justify-content-between align-items-center">
                         <h5 class="mb-0">Patient Profile</h5>
-                        <!-- <span class="badge bg-light text-primary">{{ patientDetails.patientId }}</span> -->
+                       
                     </div>
                     <div class="card-body">
                         <h5 class="card-title mb-2">{{ patientDetails.fullName }}</h5>
@@ -34,7 +34,7 @@
         </div>
     </div>
 
-    <!-- Appointments Section -->
+    
     <div class="mb-4">
         <div class="d-flex justify-content-between align-items-center mb-3">
             <h5>Your Appointments</h5>
@@ -63,7 +63,7 @@
         </ng-template>
     </div>
 
-    <!-- Clinics Section -->
+    
     <div>
         <h5 class="mb-3">Available Clinics</h5>
         <div class="container py-4" *ngIf="clinics.length; else noClinics">
@@ -86,7 +86,7 @@
                                 <div><strong>Specialty:</strong> <span class="text-success fw-bold">{{
                                         clinic.doctor.specialty }}</span></div>
                                 <div><strong>Experience:</strong> {{ clinic.doctor.yearsOfExperience }} yrs</div>
-                                <div><strong>Email:</strong> <a [href]="'mailto:' + clinic.doctor.email">{{
+                                <div><strong>Email:</strong> <a [href]="'mailto:' + clinic.doctor.email"> {{
                                         clinic.doctor.email }}</a></div>
                                 <div><strong>Contact:</strong> {{ clinic.doctor.contactNumber }}</div>
                             </div>
@@ -149,7 +149,7 @@
                             </div>
                         </div>
 
-                        <!-- Appointments Section -->
+                        
                         <div *ngIf="selectedClinicId === clinic.clinicId && selectClinicAppointments.length > 0"
                             class="card-footer bg-light">
                             <h6 class="fw-bold">Appointments</h6>
@@ -159,14 +159,6 @@
                                     <strong>Date:</strong> {{ appt.appointmentDate | date: 'mediumDate' }}<br>
                                     <strong>Purpose:</strong> {{ appt.purpose }}<br>
                                     <strong>Status:</strong> {{ appt.status }}
-
-
-                                    <!-- Delete Button -->
-                                    <!-- <button class="btn btn-sm btn-danger mt-2"
-                                        (click)="cancelAppointment(appt)">
-                                        Delete
-                                    </button> -->
-
                                 </li>
                             </ul>
                         </div>

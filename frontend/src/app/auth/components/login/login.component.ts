@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
         '',
         [
           Validators.required,
-          Validators.pattern('^[a-zA-Z0-9]*$') // No special characters
+          Validators.pattern('^[a-zA-Z0-9]*$') 
         ]
       ],
       password: [
@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
         [
           Validators.required,
           Validators.minLength(8),
-          Validators.pattern('^(?=.*[A-Z])(?=.*[0-9]).*$') // At least one capital letter and one number
+          Validators.pattern('^(?=.*[A-Z])(?=.*[0-9]).*$')
         ]
       ]
     });
@@ -40,8 +40,7 @@ export class LoginComponent implements OnInit {
 
   onSubmit(): void {
     if (this.loginForm.valid) {
-      // Simulate backend call
-      // const { username, password } = this.loginForm.value;
+ 
 
       this.authService.login(this.loginForm.value).subscribe((user) => {
         localStorage.setItem('token', user.token); 

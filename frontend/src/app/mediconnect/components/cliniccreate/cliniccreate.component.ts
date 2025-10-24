@@ -22,7 +22,6 @@ export class ClinicCreateComponent implements OnInit {
 
   ngOnInit(): void {
     this.clinicForm = this.formBuilder.group({
-      // clinicId: [1, [Validators.required, Validators.min(1)]],
       clinicName: ['', [Validators.required, Validators.minLength(2)]],
       location: ['', Validators.required],
       contactNumber: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
@@ -46,7 +45,7 @@ export class ClinicCreateComponent implements OnInit {
 
       const clinic = {
         ...this.clinicForm.value,
-        doctor: this.doctor // assuming `this.doctor` is defined in your component
+        doctor: this.doctor
       };
 
       this.mediService.addClinic(clinic).subscribe({

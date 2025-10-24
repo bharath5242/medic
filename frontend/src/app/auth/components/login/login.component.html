@@ -8,7 +8,7 @@
                 <div class="card-body">
                     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
 
-                        <!-- Username -->
+                        
                         <div class="mb-3">
                             <label class="form-label">Username</label>
                             <input type="text" class="form-control" formControlName="username" />
@@ -18,7 +18,7 @@
                             </div>
                         </div>
 
-                        <!-- Password -->
+                        
                         <div class="mb-3">
                             <label class="form-label">Password</label>
                             <input type="password" class="form-control" formControlName="password" />
@@ -28,7 +28,7 @@
                             </div>
                         </div>
 
-                        <!-- Buttons -->
+                        
                         <div class="d-flex gap-2">
                             <button type="submit" class="btn btn-success" [disabled]="loginForm.invalid">Login</button>
                             <button type="button" class="btn btn-warning" (click)="loginForm.reset()">Reset</button>
@@ -39,7 +39,7 @@
                         </div>
 
 
-                        <!-- Messages -->
+                        
                         <div *ngIf="successMessage" class="alert alert-success mt-3">{{ successMessage }}</div>
                         <div *ngIf="errorMessage" class="alert alert-danger mt-3">{{ errorMessage }}</div>
                     </form>

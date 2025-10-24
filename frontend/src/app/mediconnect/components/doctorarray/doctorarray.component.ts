@@ -30,7 +30,7 @@ export class DoctorArrayComponent implements OnInit {
       },
       {
         fullName: 'Dr. John Doe',
-        specialty: 'Orthopedics', // ✅ Updated to match test expectation
+        specialty: 'Orthopedics', 
         contactNumber: '9123456780',
         email: 'john.doe@example.com',
         yearsOfExperience: 12

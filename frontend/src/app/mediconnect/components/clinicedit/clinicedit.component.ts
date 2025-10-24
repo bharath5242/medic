@@ -4,7 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { MediConnectService } from '../../services/mediconnect.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Doctor } from '../../models/Doctor';
-import { Clinic } from '../../models/Clinic'; // Assuming you have a Clinic model
+import { Clinic } from '../../models/Clinic'; 
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -37,14 +37,6 @@ export class ClinicEditComponent implements OnInit {
         });
 
         this.doctorId = Number(localStorage.getItem('doctor_id'));
-        // this.mediService.getDoctorById(this.doctorId).subscribe({
-        //     next: (data) => {
-        //         this.doctor = data;
-        //     },
-        //     error: () => {
-        //         this.errorMessage = 'Failed to load doctor information.';
-        //     }
-        // });
 
         this.clinicId = Number(this.route.snapshot.paramMap.get('clinicId'));
         console.log("clinicid: ", this.clinicId);
@@ -57,29 +49,12 @@ export class ClinicEditComponent implements OnInit {
                     establishedYear: clinic.establishedYear
                 })
                 this.doctor = clinic.doctor;
-                // {
-                //     "clinicId": 3,
-                //         "clinicName": "yashoda hospitals",
-                //             "location": "Hyderabad",
-                //                 "contactNumber": "9876543211",
-                //                     "establishedYear": 1997,
-                //                         "doctor": {
-                //         "doctorId": 2,
-                //             "fullName": "Damon Salvatore",
-                //                 "specialty": "Surgeon",
-                //                     "contactNumber": "9876543211",
-                //                         "email": "damon@gmail.com",
-                //                             "yearsOfExperience": 2
-                //     },
-                //     "doctorId": 2
-                // }
             },
             error: () => {
                 this.errorMessage = 'Failed to load clinic data.';
             }
         });
     }
-
 
 
     onSubmit(): void {
@@ -90,7 +65,6 @@ export class ClinicEditComponent implements OnInit {
                 clinicId: this.clinicId,
                 ...this.clinicForm.value,
                 doctorId: this.doctorId
-                // doctor: this.doctor
             };
             
             this.mediService.updateClinic(updatedClinic).subscribe({

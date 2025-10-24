@@ -30,16 +30,12 @@ export class DoctorCreateComponent implements OnInit {
     }
 
     onSubmit(): void {
-        // this.submitted = true;
         if (this.doctorForm.valid) {
             this.mediService.addDoctor(this.doctorForm.value).subscribe({
-                next: (data) => {
-                    // this.patientForm.patchValue(data);
+                next: (data) => {                    
                     this.doctor = data;
                     this.successMessage = 'Patient created successfully!';
                     this.errorMessage = '';
-                    console.log('Patient Created: ', this.doctor);
-                    // this.resetForm();
                     this.doctorForm.reset();
                 },
                 error: (errorr) => {
@@ -50,7 +46,6 @@ export class DoctorCreateComponent implements OnInit {
             this.errorMessage = null;
             console.log('Doctor Data:', this.doctorForm.value);
             this.doctorForm.reset();
-            // this.submitted = false;
         } else {
             this.errorMessage = 'Please fill out all required fields correctly.';
             this.successMessage = null;
@@ -66,9 +61,6 @@ export class DoctorCreateComponent implements OnInit {
             email: '',
             yearsOfExperience: null
         });
-        // this.submitted = false;
-        // this.successMessage = '';
-        // this.errorMessage = '';
     }
 
     private handleError(error: HttpErrorResponse) {

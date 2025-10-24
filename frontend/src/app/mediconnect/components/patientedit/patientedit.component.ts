@@ -60,7 +60,6 @@ export class PatientEditComponent implements OnInit {
                 next: (data) => {
                     // this.doctorDetails = data;
                     this.router.navigate(['/dashboard']);
-                    console.log("Doctor details: ", data);
                     this.successMessage = 'done';
                     this.errorMessage = null;
                 },

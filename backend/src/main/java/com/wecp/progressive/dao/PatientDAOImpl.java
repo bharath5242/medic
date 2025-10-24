@@ -13,16 +13,6 @@ import com.wecp.progressive.config.DatabaseConnectionManager;
 import com.wecp.progressive.entity.Patient;
 
 public class PatientDAOImpl implements PatientDAO {
-    // private Connection connection;
-
-    // public PatientDAOImpl(Connection connection){
-    //     try {
-    //         connection = DatabaseConnectionManager.getConnection();
-    //     } catch (SQLException e) {
-    //         e.printStackTrace();
-    //     }
-        
-    // }
 
     @Override
     public int addPatient(Patient patient) throws SQLException {

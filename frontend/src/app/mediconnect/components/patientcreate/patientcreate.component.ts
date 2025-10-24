@@ -42,7 +42,6 @@ export class PatientCreateComponent implements OnInit {
         if (this.patientForm.valid) {
             this.mediService.addPatient(this.patientForm.value).subscribe({
                 next: (data) => {
-                    // this.patientForm.patchValue(data);
                     this.patient = data;
                     this.successMessage = 'Patient created successfully!';
                     this.errorMessage = '';
@@ -79,7 +78,6 @@ export class PatientCreateComponent implements OnInit {
         this.errorMessage = '';
     }
 
-    // Getters for cleaner template access
     get patientId() {
         return this.patientForm.get('patientId');
     }

@@ -32,16 +32,14 @@ export class DashboardComponent implements OnInit {
         this.userId = Number(localStorage.getItem('user_id'));
         this.doctorId = Number(localStorage.getItem('doctor_id'));
         this.patientId = Number(localStorage.getItem('patient_id'));
-        console.log("doc", this.doctorId);
-        console.log("pat", this.patientId);
-        console.log("usr", this.userId);
+ 
         if (!isNaN(this.doctorId) && this.doctorId) {
-            console.log("Doctor Id: ", this.doctorId);
+
             this.loadDoctorData();
             this.doctorClinics();
         }
         else {
-            console.log("Patient ID: ", this.patientId);
+     
             this.loadPatientData();
         }
     }
@@ -51,7 +49,7 @@ export class DashboardComponent implements OnInit {
         this.mediService.getDoctorById(this.doctorId).subscribe({
             next: (data) => {
                 this.doctorDetails = data;
-                console.log("Doctor details: ", this.doctorDetails);
+               
             },
             error: () => {
                 console.log("failed to find doctor details")
@@ -114,7 +112,6 @@ export class DashboardComponent implements OnInit {
         })
 
         this.mediService.getAppointmentsByPatient(this.patientId).subscribe((data) => {
-            console.log("appointments:", data);
             this.appointments = data;
         })
 

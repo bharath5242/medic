@@ -1,9 +1,8 @@
 <div class="container mt-5">
     <div class="row justify-content-center">
-        <div class="col-md-8"> <!-- Adjust width here -->
+        <div class="col-md-8">
             <form [formGroup]="clinicForm" (ngSubmit)="onSubmit()" class="p-4 border rounded bg-light">
 
-                <!-- Clinic Name -->
                 <div class="mb-3">
                     <label class="form-label">Clinic Name:</label>
                     <input type="text" class="form-control" formControlName="clinicName" />
@@ -13,7 +12,7 @@
                     </div>
                 </div>
 
-                <!-- Location -->
+   
                 <div class="mb-3">
                     <label class="form-label">Location:</label>
                     <input type="text" class="form-control" formControlName="location" />
@@ -23,7 +22,7 @@
                     </div>
                 </div>
 
-                <!-- Contact Number -->
+        
                 <div class="mb-3">
                     <label class="form-label">Contact Number:</label>
                     <input type="text" class="form-control" formControlName="contactNumber" />
@@ -33,7 +32,6 @@
                     </div>
                 </div>
 
-                <!-- Established Year -->
                 <div class="mb-3">
                     <label class="form-label">Established Year:</label>
                     <input type="text" class="form-control" formControlName="establishedYear" />
@@ -43,14 +41,14 @@
                     </div>
                 </div>
 
-                <!-- Buttons -->
+              
                 <div class="d-flex gap-2 mt-4">
                     <button type="submit" class="btn btn-primary" [disabled]="clinicForm.invalid"
                         (click)="onSubmit()">Submit</button>
                     <button type="button" class="btn btn-outline-danger" (click)="resetForm()">Reset</button>
                 </div>
 
-                <!-- Messages -->
+           
                 <p *ngIf="successMessage" class="alert alert-success mt-3">{{ successMessage }}</p>
                 <p *ngIf="errorMessage" class="alert alert-danger mt-3">{{ errorMessage }}</p>
 

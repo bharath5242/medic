@@ -12,11 +12,6 @@ export class NavBarComponent {
 
     constructor(private router: Router){}
 
-    // ngOnInit(): void {
-    //     this.isAuthenticated = localStorage.getItem('token') ? true : false;
-    //     this.role = localStorage.getItem('role');
-    // }
-
     logout() {
         localStorage.removeItem('token');
         localStorage.removeItem('role');
